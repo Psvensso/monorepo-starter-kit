@@ -1,0 +1,30 @@
+{
+  "name": "root",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "build": "lerna run build && yarn run build:story",
+    "build:something": "yarn workspace @root/something build",
+    "postinstall": "lerna bootstrap",
+    "generate-types": "yarn workspace @root/data generate"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "@types/node": "^15.0.2",
+    "concurrently": "^6.0.0",
+    "lerna": "^4.0.0",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.2.4"
+  },
+  "engines": {
+    "npm": "please-use-yarn",
+    "yarn": ">= 1.22.0",
+    "node": ">= 14.0.0"
+  }
+}

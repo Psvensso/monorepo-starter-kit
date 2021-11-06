@@ -1,0 +1,10 @@
+{
+  "README": [""],
+  "compilerOptions": {
+    "isolatedModules": false,
+    "esModuleInterop": true
+  },
+  "module": "CommonJS",
+  "files": [],
+  "include": []
+}
